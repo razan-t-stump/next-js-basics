@@ -10,7 +10,7 @@ function EventDetailPage() {
   const params = useParams();
   const { id } = params;
 
-  const event = getEventById(id);
+  const event = getEventById(id as string);
   if (!event) {
     return <p>No event found!</p>;
   }
